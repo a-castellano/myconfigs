@@ -7,4 +7,5 @@ chmod 400 /root/.ssh/id_rsa
 cp /vagrant/ssh_keys/id_rsa.pub /root/.ssh/id_rsa.pub
 apt-get update -y
 apt-get upgrade -y
+locale-gen es_ES.UTF-8
 ifconfig

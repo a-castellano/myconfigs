@@ -2,18 +2,18 @@ Vim SetUp
 ========
 
 # Information
-How I setup my Vim configuration in a Arch Linux.
+How to setup my Vim configuration in a Ubuntu (16.04) system.
 
 # Steps to set it up
 
 ## Step 1. Install packages
 ```bash
-yaourt -S vim make camake
+sudo apt-get install vim vim-nox-py2 python-dev python3-dev cmake 
 ```
 
 ## Step 2. Linking config file
 ```bash
-ln -s ~/workspace/myconfigs/vim/.vimrc ~/.vimrc
+ln -s ~/workspace/dot-files/vim/.vimrc ~/.vimrc
 mkdir -p ~/.vim/bundle
 ```
 

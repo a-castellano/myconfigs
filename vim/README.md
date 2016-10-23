@@ -8,7 +8,7 @@ How to setup my Vim configuration in a Ubuntu (16.04) system.
 
 ## Step 1. Install packages
 ```bash
-sudo apt-get install vim vim-nox-py2 python-dev python3-dev cmake 
+sudo apt-get install vim vim-nox python-dev python3-dev cmake 
 ```
 
 ## Step 2. Linking config file

@@ -13,7 +13,7 @@ sudo apt-get install vim vim-nox-py2 python-dev python3-dev cmake
 
 ## Step 2. Linking config file
 ```bash
-ln -s ~/workspace/dot-files/vim/.vimrc ~/.vimrc
+ln -s ~/workspace/myconfigs/vim/.vimrc ~/.vimrc
 mkdir -p ~/.vim/bundle
 ```
 

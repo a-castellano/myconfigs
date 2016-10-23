@@ -29,7 +29,7 @@ set showmatch
 set comments=sl:/*,mb:\ *,elx:\ */
 
 " folding methods
-set foldmethod=marker
+set foldmethod=syntax
 set foldmarker={,}
 set foldlevel=0
 set foldclose=all
@@ -65,6 +65,14 @@ imap <F9> n<CR>
 map <F12> <C-]>
 
 "clang-format integration
+
+let g:clang_format#style_options = {
+            \ "AllowShortIfStatementsOnASingleLine" : "true",
+            \ "AlwaysBreakTemplateDeclarations" : "true",
+            \ "Standard" : "C++11",
+            \ "BreakBeforeBraces" : "Stroustrup"}
+
+
 " Ubuntu
 map <C-K> :pyf /usr/share/vim/addons/syntax/clang-format.py<cr>
 imap <C-K> <c-o>:pyf /usr/share/vim/addons/syntax/clang-format.py<cr>
@@ -85,6 +93,13 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
+" typescript
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
+autocmd FileType typescript :set makeprg=tsc
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+
 " Vim Bundles (Vundle)
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
@@ -97,7 +112,7 @@ Bundle 'vim-scripts/Conque-GDB'
 Bundle 'oplatek/Conque-Shell'
 Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'jiangmiao/auto-pairs'
-
+Bundle 'leafgarland/typescript-vim'
 " Stuff for the snippets
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -110,6 +125,9 @@ Plugin 'vim-airline/vim-airline-themes'
 
 " Color theme
 Plugin 'NLKNguyen/papercolor-theme'
+
+" Go
+Plugin 'fatih/vim-go'
 
 filetype plugin indent on
 
@@ -131,5 +149,15 @@ let g:UltiSnipsJumpForwardTrigger      = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger     = '<s-tab>'
 let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+let g:go_fmt_command = "goimports"
+
 
 colorscheme PaperColor

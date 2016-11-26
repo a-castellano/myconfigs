@@ -38,6 +38,8 @@ set foldclose=all
 set visualbell
 set t_vb=
 
+autocmd BufNewFile,BufRead *.sls set tabstop=2 softtabstop=2 shiftwidth=2
+
 " Enhanced keyboard mappings
 "
 " in normal mode F2 will save the file
@@ -118,6 +120,7 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle 'honza/vim-snippets'
+Bundle 'saltstack/salt-vim'
 
 " Airline
 Plugin 'vim-airline/vim-airline'

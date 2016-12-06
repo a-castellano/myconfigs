@@ -21,4 +21,9 @@ alias car='cat'
 
 eval "$(thefuck --alias)"
 
+upup(){ DEEP=$1; [ -z "${DEEP}" ] && { DEEP=1; }; for i in $(seq 1 ${DEEP}); do cd ../; done; }
+alias up='upup'
+
+
+
 source $ZSH/oh-my-zsh.sh

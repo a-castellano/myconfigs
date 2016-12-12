@@ -107,7 +107,7 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'"
 Bundle 'scrooloose/nerdtree'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
 Bundle 'vim-scripts/Conque-GDB'

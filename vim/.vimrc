@@ -22,11 +22,14 @@ set background=dark
 syntax on
 " colorscheme wombat256
 " turn line numbers on
-set relativenumber number
+" set relativenumber number
+set number
 " highlight matching braces
 set showmatch
 " intelligent comments
 set comments=sl:/*,mb:\ *,elx:\ */
+
+set backspace=2
 
 " folding methods
 set foldmethod=syntax
@@ -67,6 +70,7 @@ imap <F9> n<CR>
 map <F12> <C-]>
 
 "clang-format integration
+let g:NERDTreeDirArrows=0
 
 let g:clang_format#style_options = {
             \ "AllowShortIfStatementsOnASingleLine" : "true",

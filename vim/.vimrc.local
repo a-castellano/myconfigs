@@ -1,0 +1,6 @@
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+colorscheme ir_black
+set mouse-=a
+autocmd VimEnter * NERDTree
+let NERDTreeQuitOnOpen=0
+set directory^=$HOME/.vim/tmp//

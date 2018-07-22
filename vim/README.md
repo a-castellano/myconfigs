@@ -1,31 +1,11 @@
 Vim SetUp
 ========
 
-# Information
-How to setup my Vim configuration in a Ubuntu (16.04) system.
-
 # Steps to set it up
 
-## Step 1. Install packages
+## Step 1. Install spf13
 ```bash
-sudo apt-get install vim vim-nox python-dev python3-dev cmake 
+curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh 
 ```
 
-## Step 2. Linking config file
-```bash
-ln -s ~/workspace/myconfigs/vim/.vimrc ~/.vimrc
-mkdir -p ~/.vim/bundle
-```
-
-## Step 3. Clone Vundle and install plugins
-[https://github.com/VundleVim/Vundle.vim](https://github.com/VundleVim/Vundle.vim)
-```bash
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
-```
-
-## Step 4. Configure YouCompleteMe
-```bash
-cd ~/.vim/bundle/YouCompleteMe
-./install.py --clang-completer
-```
+## Step 2. Place .vimrc.local

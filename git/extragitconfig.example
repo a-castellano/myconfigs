@@ -1,3 +1,7 @@
 [user]
     name = Álvaro Castellano Vela
     email = other@mail.com
+    signingkey = YOURGPGID
+
+[commit]
+    gpgsign = true

@@ -36,6 +36,5 @@ autocmd FileType markdown setlocal spell
 autocmd FileType rst setlocal spell
 autocmd FileType tex setlocal spell
 
-autocmd Filetype yml setlocal ts=2 sw=2 expandtab 
+autocmd Filetype yml setlocal ts=2 sw=2 expandtab
 autocmd Filetype yml set nospell
-

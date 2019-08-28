@@ -1,6 +1,41 @@
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'fatih/vim-go'
+Plugin 'vim-perl/vim-perl'
+Plugin 'rdunklau/vim-perltidy'
+Plugin 'bash-support.vim'
+
 colorscheme ir_black
 set mouse-=a
 autocmd VimEnter * NERDTree
 let NERDTreeQuitOnOpen=0
-set directory^=$HOME/.vim/tmp//
+set directory^=$HOME/.vim/tmp/
+
+
+" Customize
+let g:indent_guides_enable_on_vim_startup = 0
+
+" Use neocomplete
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" <TAB>: completion
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" vim-go
+let g:go_fmt_autosave = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+autocmd BufRead,BufNewFile *.txt setlocal spell
+
+autocmd FileType gitcommit setlocal spell
+autocmd FileType markdown setlocal spell
+autocmd FileType rst setlocal spell
+autocmd FileType tex setlocal spell
+
+autocmd Filetype yml setlocal ts=2 sw=2 expandtab 
+autocmd Filetype yml set nospell
+

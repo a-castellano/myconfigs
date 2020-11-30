@@ -31,8 +31,8 @@ set foldexpr=nvim_treesitter#foldexpr()
 
 set nofoldenable
 
-" copy to clipboard
-set clipboard+=unnamedplus
+" do not copy to clipboard
+"set clipboard+=unnamedplus
 
 " search
 set ignorecase
@@ -61,6 +61,15 @@ nnoremap <expr> N 'nN'[v:searchforward]
 " make ; always "find" forward and , backward
 nnoremap <expr> ; getcharsearch().forward ? ';' : ','
 nnoremap <expr> , getcharsearch().forward ? ',' : ';'
+
+" autoclode parentheis and others
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 
 set cursorline
 set number
